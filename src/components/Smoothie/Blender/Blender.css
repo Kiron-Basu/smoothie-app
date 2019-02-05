@@ -1,0 +1,113 @@
+.textBoxWrapper {
+    padding: 85px 15px 0px 15px;
+    max-width: 170px;
+    margin: 0 auto;
+    flex-direction: column;
+    border-left: solid 3px white;
+    border-right: solid 3px white;
+    border-top: solid 3px white;
+    border-bottom: solid 3px white;
+    border-radius: 25% 25% 0 0;
+    background-color: lightblue;
+    
+  }
+  
+  .box {
+    padding: 4px;
+    margin-bottom: 0px;
+    /*flex: 1;*/
+    box-sizing: border-box;
+    flex-basis: 30%;
+    border-right: solid 2px lightblue;
+    border-left: solid 2px lightblue;
+    text-align: center;
+    font-size: .7rem;
+    
+  }
+  
+  .box:nth-child(1) {background-color: pink;}
+  .box:nth-child(2) {background: linear-gradient(45deg, red, orange);}
+  .box:nth-child(3) {background-color: orangered;}
+  .box:first-child {
+    border-top: solid 2px lightblue;
+    border-radius: 25px 25px 0 0;
+  }
+  .box:last-child {
+    border-radius: 0 0 12px 12px;
+  }
+  
+  @media (min-width: 900px) {
+    .text-box-wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  
+  .baseTrapezium {
+    position: relative;
+    width: 250px;
+    height: 50px;
+    background: #F5F5DC;
+  /*   background: linear-gradient(to left, red, orange);  */
+  -webkit-clip-path: polygon(13% 0, 87% 0, 100% 35%, 0 35%);
+  clip-path: polygon(6% 0, 94% 0, 100% 100%, 0 100%);
+    margin: 0 auto;
+    box-shadow: 5px 10px #888888;
+  }
+  
+  .baseRectangle {
+    width: 250px;
+    height: 50px;
+    background: #F5F5DC;
+    margin: 0 auto;
+    text-align: center;
+    
+  }
+  .topper {
+    position: relative;
+    width: 50px;
+    height: 35px;
+    background: #696969;
+  /*   background: linear-gradient(to left, red, orange);  */
+  -webkit-clip-path: polygon(27% 75%, 79% 75%, 90% 100%, 18% 100%);
+  clip-path: polygon(21% 75%, 79% 75%, 86% 100%, 14% 100%);
+    margin: 0 auto;
+  }
+  
+  .topperFoundation {
+    position: relative;
+    width: 120px;
+    height: 6px;
+    background: #F5F5DC;
+  /*   background: linear-gradient(to left, red, orange);  */
+  -webkit-clip-path: polygon(27% 75%, 79% 75%, 90% 100%, 18% 100%);
+  clip-path: polygon(21% 0%, 79% 0%, 86% 100%, 14% 100%);
+    margin: 0 auto;
+    padding: 0;
+    border: 0;
+  }
+  
+  .text-box-wrapper:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
+  }
