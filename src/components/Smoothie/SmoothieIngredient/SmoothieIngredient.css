@@ -1,16 +1,76 @@
 .Oats {
-    background-color: grey;
+    /* display: flex; */
+    height: 10px;
+    width: 100%;
+    /*flex: 1;*/
+    /* box-sizing: border-box; */
+    /* flex-basis: 30%; */
+    /* border-right: solid 2px lightblue; */
+    border: dotted 1px #003366;
+    /* font-size: .7rem; */
+    background: linear-gradient(45deg, grey, beige);
 }
 
 .Banana {
-    background-color: yellow;
+    padding: 4px;
+    height: 10px;
+    width: 100%;
+    margin-bottom: 0px;
+    /*flex: 1;*/
+    box-sizing: border-box;
+    flex-basis: 30%;
+    /* border-right: solid 2px lightblue;
+    border-left: solid 2px lightblue; */
+    text-align: center;
+    font-size: .7rem;
+    background: linear-gradient(45deg, yellow, beige);
+    border: dotted 1px #003366;
 }
 
 .Strawberries {
-    background-color: red;
+    padding: 4px;
+    height: 10px;
+    width: 100%;
+    margin-bottom: 0px;
+    /*flex: 1;*/
+    box-sizing: border-box;
+    flex-basis: 30%;
+    /* border-right: solid 2px lightblue;
+    border-left: solid 2px lightblue; */
+    text-align: center;
+    font-size: .7rem;
+    background: linear-gradient(45deg, red, pink);
+    border: dotted 1px #003366;
 }
 
 .Raspberries {
-    background-color: magenta;
+    padding: 4px;
+    height: 10px;
+    width: 100%;
+    margin-bottom: 0px;
+    /*flex: 1;*/
+    box-sizing: border-box;
+    flex-basis: 30%;
+    /* border-right: solid 2px lightblue;
+    border-left: solid 2px lightblue; */
+    text-align: center;
+    font-size: .7rem;
+    background: linear-gradient(45deg, pink, magenta);
+    border: dotted 1px #003366;
 }
 
+/* .box {
+   
+    
+  } */
+  
+  /* .box:nth-child(1) {background-color: pink;}
+  .box:nth-child(2) {background: linear-gradient(45deg, red, orange);}
+  .box:nth-child(3) {background-color: orangered;}
+  .box:first-child {
+    border-top: solid 2px lightblue;
+    border-radius: 25px 25px 0 0;
+  }
+  .box:last-child {
+    border-radius: 0 0 12px 12px;
+  } */

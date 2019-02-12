@@ -10,9 +10,8 @@ class SmoothieIngredient extends Component {
                 ingredient = <div className={classes.Oats}></div>;
                 break;
             case ('banana'):
-                ingredient = (
-                <div className={classes.Banana}></div>
-                );
+                ingredient = 
+                <div className={classes.Banana}></div>;
                 break;
             case ('strawberries'):
                 ingredient = <div className={classes.Strawberries}></div>;
