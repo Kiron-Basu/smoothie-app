@@ -31,6 +31,7 @@
 .Label {
     padding: 10px;
     font-weight: bold;
+    font-size: 1rem;
     width: 90px;
 }
 
@@ -56,4 +57,19 @@
 
 .ControlGroup {
     transform: translateX(-55px);
+}
+
+@media (max-width: 399px) {
+    .BuildControl {
+        flex-flow: column;
+    }
+    .BuildControl button {
+        width: 180px;
+    }
+    .ControlGroup {
+        transform: translateX(0px);
+    }
+    .Label {
+        text-align: center;
+    }
 }

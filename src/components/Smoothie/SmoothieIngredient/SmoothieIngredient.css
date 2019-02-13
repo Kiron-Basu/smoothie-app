@@ -59,18 +59,3 @@
     border: dotted 1px #003366;
 }
 
-/* .box {
-   
-    
-  } */
-  
-  /* .box:nth-child(1) {background-color: pink;}
-  .box:nth-child(2) {background: linear-gradient(45deg, red, orange);}
-  .box:nth-child(3) {background-color: orangered;}
-  .box:first-child {
-    border-top: solid 2px lightblue;
-    border-radius: 25px 25px 0 0;
-  }
-  .box:last-child {
-    border-radius: 0 0 12px 12px;
-  } */
