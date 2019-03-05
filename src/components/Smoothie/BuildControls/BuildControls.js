@@ -10,9 +10,9 @@ const controls = [
 ];
 
 const buildControls = (props) => (
-<div className={classes.BuildControls}>
-<p className={classes.Price}>Current Price: <strong>£{props.price.toFixed(2)}</strong></p>
-    {controls.map(ctrl => (
+        <div className={classes.BuildControls}>
+        <p className={classes.Price}>Current Price: <strong>£{props.price.toFixed(2)}</strong></p>
+        {controls.map(ctrl => (
         <BuildControl
         key={ctrl.label}
         label={ctrl.label}
@@ -21,7 +21,11 @@ const buildControls = (props) => (
         remove={() => props.remove(ctrl.type)}
         disabledInfo={props.disabledInfo[ctrl.type]}
         />
-    ))}
-</div>
-)
+        ))}
+        <button className={classes.OrderButton}
+            onClick={props.ordered} 
+            className={classes.OrderButton}
+            disabled={!props.purchasable}>ORDER NOW</button>
+    </div>
+    )
       export default buildControls

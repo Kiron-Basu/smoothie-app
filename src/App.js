@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
-import './App.css';
+import {Route, Switch} from 'react-router-dom';
+
 import Layout from './containers/Layout/Layout';
-import SmoothieBuilder from './containers/SmoothieBuilder/SmoothieBuilder'
+import SmoothieBuilder from './containers/SmoothieBuilder/SmoothieBuilder';
+import Checkout from './containers/Checkout/Checkout';
+import Orders from './containers/Orders/Orders';
 
 class App extends Component {
   // state = {
@@ -18,7 +21,13 @@ class App extends Component {
     return (
       <div>
         <Layout>
-          <SmoothieBuilder/>
+          {/* <SmoothieBuilder/>
+          <Checkout /> */}
+          <Switch>
+            <Route path="/checkout" component={Checkout} />
+            <Route path="/orders" exact component={Orders}/>
+            <Route path="/" exact component={SmoothieBuilder} />
+          </Switch>
         </Layout>
       </div>
     );

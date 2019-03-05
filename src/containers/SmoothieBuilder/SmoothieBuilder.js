@@ -26,6 +26,7 @@ class SmoothieBuilder extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props)
     axios.get('https://react-my-burger-e7faf.firebaseio.com/ingredients.json')
     .then(response => {
       this.setState({ingredients: response.data})
@@ -42,31 +43,18 @@ class SmoothieBuilder extends Component {
     this.setState({purchasing: false});
   }
   continuePurchaseHandler = () => {
-    // alert('You have opted to continue');
-    this.setState({loading: true});
-    const order = {
-      ingredients: this.state.ingredients,
-      price: this.state.totalPrice, //best practice is to recalculate price on server to prevent manipulation but use this for now
-      customer: {
-        name: 'Tom Jones',
-        address: {
-          street: 'William Street',
-          postCode: 'SN31JP',
-          country: 'England'
-      },
-      email: 'test@test.com'
-    },
-    deliveryMethod: 'fastest'
-  }
-    axios.post('/orders.json', order)
-    .then(response => {
-      console.log(response);
-      this.setState({loading: false, purchasing: false});
-    })
-    .catch(error => {
-      console.log(error);
-      this.setState({loading: false, purchasing: false})
-    }); //.json is the appropriate end point for firebase
+  //   // alert('You have opted to continue');
+  
+  const queryParams = [];
+    for (let i in this.state.ingredients) {
+      queryParams.push(encodeURIComponent(i) + '=' + encodeURIComponent(this.state.ingredients[i]));
+    }
+    queryParams.push('price=' + this.state.totalPrice)
+    const queryString = queryParams.join('&');
+    this.props.history.push({
+    pathname: '/checkout',
+    search: '?' + queryString
+  });
   }
   
   updatePurchaseState (ingredients) {
@@ -119,14 +107,16 @@ class SmoothieBuilder extends Component {
           <>
           <Smoothie
           ingredients={this.state.ingredients}
-          purchasable={this.state.purchasable}
-          ordered={this.purchaseHandler}
+          // purchasable={this.state.purchasable}
+          // ordered={this.purchaseHandler}
           />
           <BuildControls
           add={this.addIngredientHandler}
           remove={this.removeIngredientHandler}
           disabledInfo={disabledInfo}
           price={this.state.totalPrice}
+          ordered={this.purchaseHandler}
+          purchasable={this.state.purchasable}
           />
           </>
           );

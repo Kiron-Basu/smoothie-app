@@ -1,6 +1,7 @@
 .Oats {
     /* display: flex; */
-    height: 10px;
+    position: relative;
+    height: 6px;
     width: 100%;
     /*flex: 1;*/
     /* box-sizing: border-box; */
@@ -9,11 +10,12 @@
     border: dotted 1px #003366;
     /* font-size: .7rem; */
     background: linear-gradient(45deg, grey, beige);
+    opacity: .7;
 }
 
 .Banana {
     padding: 4px;
-    height: 10px;
+    height: 6px;
     width: 100%;
     margin-bottom: 0px;
     /*flex: 1;*/
@@ -25,11 +27,12 @@
     font-size: .7rem;
     background: linear-gradient(45deg, yellow, beige);
     border: dotted 1px #003366;
+    opacity: .7;
 }
 
 .Strawberries {
     padding: 4px;
-    height: 10px;
+    height: 6px;
     width: 100%;
     margin-bottom: 0px;
     /*flex: 1;*/
@@ -41,11 +44,12 @@
     font-size: .7rem;
     background: linear-gradient(45deg, red, pink);
     border: dotted 1px #003366;
+    opacity: .7;
 }
 
 .Raspberries {
     padding: 4px;
-    height: 10px;
+    height: 6px;
     width: 100%;
     margin-bottom: 0px;
     /*flex: 1;*/
@@ -57,5 +61,6 @@
     font-size: .7rem;
     background: linear-gradient(45deg, pink, magenta);
     border: dotted 1px #003366;
+    opacity: .7;
 }
 

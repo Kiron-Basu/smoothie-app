@@ -5,7 +5,7 @@
     overflow: auto;
     text-align: center;
     font-weight: bold;
-    font-size: .9rem;
+    font-size: .8rem;
 }
 @media (min-width: 500px) and (max-height: 400px) {
     .Smoothie {
@@ -23,4 +23,10 @@
         width: 700px;
         height: 460px;
     }
+}
+
+.Smoothie p {
+    opacity: 1;
+    transition: opacity .1s ease-out;
+    transform: translateY(-50px);
 }

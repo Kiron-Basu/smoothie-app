@@ -14,12 +14,10 @@ const Smoothie = (props) => {
     if (transformedIngredients.length ===0) {
         transformedIngredients = <p>Please start adding ingredients!</p>
     }
+    
     return (
         <div className={classes.Smoothie}>
-            <Blender ingredients={transformedIngredients}
-            purchasable={props.purchasable}
-            ordered={props.ordered}
-            />
+            <Blender className={classes.Zindex} ingredients={transformedIngredients}/>
         </div>
     );
 }
