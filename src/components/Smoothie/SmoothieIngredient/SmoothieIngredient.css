@@ -1,66 +1,37 @@
 .Oats {
-    /* display: flex; */
     position: relative;
     height: 6px;
     width: 100%;
-    /*flex: 1;*/
-    /* box-sizing: border-box; */
-    /* flex-basis: 30%; */
-    /* border-right: solid 2px lightblue; */
     border: dotted 1px #003366;
-    /* font-size: .7rem; */
     background: linear-gradient(45deg, grey, beige);
     opacity: .7;
 }
 
-.Banana {
+.Banana, .Strawberries, .Raspberries, .Kiwi, .Blueberries, .Kale, .Pineapple, .Mango {
     padding: 4px;
     height: 6px;
     width: 100%;
     margin-bottom: 0px;
-    /*flex: 1;*/
     box-sizing: border-box;
     flex-basis: 30%;
-    /* border-right: solid 2px lightblue;
-    border-left: solid 2px lightblue; */
     text-align: center;
     font-size: .7rem;
-    background: linear-gradient(45deg, yellow, beige);
     border: dotted 1px #003366;
     opacity: .7;
 }
+.Banana {background: linear-gradient(45deg, yellow, beige);}
 
-.Strawberries {
-    padding: 4px;
-    height: 6px;
-    width: 100%;
-    margin-bottom: 0px;
-    /*flex: 1;*/
-    box-sizing: border-box;
-    flex-basis: 30%;
-    /* border-right: solid 2px lightblue;
-    border-left: solid 2px lightblue; */
-    text-align: center;
-    font-size: .7rem;
-    background: linear-gradient(45deg, red, pink);
-    border: dotted 1px #003366;
-    opacity: .7;
-}
+.Strawberries {background: linear-gradient(45deg, red, pink);}
 
-.Raspberries {
-    padding: 4px;
-    height: 6px;
-    width: 100%;
-    margin-bottom: 0px;
-    /*flex: 1;*/
-    box-sizing: border-box;
-    flex-basis: 30%;
-    /* border-right: solid 2px lightblue;
-    border-left: solid 2px lightblue; */
-    text-align: center;
-    font-size: .7rem;
-    background: linear-gradient(45deg, pink, magenta);
-    border: dotted 1px #003366;
-    opacity: .7;
-}
+.Kiwi {background: linear-gradient(45deg, rgb(194, 255, 192), rgb(21, 255, 0));}
+
+.Blueberries {background: linear-gradient(45deg, rgb(192, 209, 255), rgb(0, 89, 255));}
+
+.Kale {background: linear-gradient(45deg, rgb(55, 219, 68), rgb(0, 255, 34));}
+
+.Pineapple {background: linear-gradient(45deg, rgb(255, 246, 119), rgb(255, 251, 0));}
+
+.Mango {background: linear-gradient(45deg, rgb(252, 255, 51), rgb(218, 133, 99));}
+
+.Raspberries {background: linear-gradient(45deg, pink, magenta);}
 

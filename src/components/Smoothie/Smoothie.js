@@ -3,7 +3,7 @@ import classes from './Smoothie.css';
 import SmoothieIngredient from './SmoothieIngredient/SmoothieIngredient';
 import Blender from './Blender/Blender';
 
-const Smoothie = (props) => {
+const Smoothie = (props) => { //gets amount of each ingredient
     let transformedIngredients = Object.keys(props.ingredients)
     .map(ingrtKey => {
         return [...Array(props.ingredients[ingrtKey])]
@@ -24,7 +24,7 @@ const Smoothie = (props) => {
 
 export default Smoothie;
 
-//get an array equal to value of each key e.g
+        //get an array equal to value of each key e.g
         //if salad: 3, then Array(3) = 3 empty slots, as Array(arg) creates 3 empty array items
         // the spread operator (inside braces) then spreads these empty array items into an actual array hence creating an array
         //which has the same dimensions as the digit property value. The next map returns an underscore inplace of each undefined item

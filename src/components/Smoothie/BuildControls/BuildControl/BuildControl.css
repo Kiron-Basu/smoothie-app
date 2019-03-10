@@ -59,12 +59,28 @@
     transform: translateX(-55px);
 }
 
-@media (max-width: 399px) {
-    .BuildControl {
+@media (max-width: 950px) {
+    /* .BuildControl {
         flex-flow: column;
-    }
+    } */
     .BuildControl button {
-        width: 180px;
+        width: 70px;
+    }
+    .ControlGroup {
+        transform: translateX(0px);
+    }
+    .Label {
+        text-align: center;
+    }
+}
+
+@media (max-width: 399px) {
+    /* .BuildControl {
+        flex-flow: column;
+    } */
+    .BuildControl button {
+        width: 70px;
+        margin: 0 2px;
     }
     .ControlGroup {
         transform: translateX(0px);

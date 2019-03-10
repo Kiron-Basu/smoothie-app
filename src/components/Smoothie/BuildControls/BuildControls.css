@@ -1,13 +1,21 @@
 .BuildControls {
     width: 100%;
-    background-color: orange;
+    background-color: rgb(245, 173, 40);
+    padding:  45px 10px;
+    margin: -150px auto;
+    box-shadow: 0 2px 1px #ccc;
+    height: 90vh;
+    /* height: 300px; */
+}
+
+.Wrap {
     display: flex;
     flex-flow: column;
+    flex-wrap: wrap;
     justify-content: space-around;
+    align-content: center;
     align-items: center;
-    padding:  0 10px;
-    margin: auto;
-    box-shadow: 0 2px 1px #ccc;
+    height: 200px
 }
 
 .Price {
@@ -15,9 +23,14 @@
     border: 1px solid grey;
     padding: 6px;
     box-shadow: 0 1px 2px black;
+    width: 200px;
+    text-align: center;
+    margin: 1rem auto;
 }
 
 .OrderButton {
+    position: relative;
+    display: block;
     background-color: rgb(253, 251, 128);
     outline: none;
     cursor: pointer;
@@ -27,7 +40,8 @@
     font-size: 1.2em;
     padding: 15px 30px;
     box-shadow: 2px 2px 2px #966909;
-    margin: 2rem 0;
+    margin: 1rem auto;
+    /* transform: translate(-50%, -50%); */
 }
 
 .OrderButton:hover, .OrderButton:active {
@@ -59,3 +73,35 @@
         transform: scale(1);
     }
 }
+
+@media (max-width: 399px) {
+    .Wrap {
+        flex-wrap: nowrap;
+        display: block;
+        height: 400px;
+    }
+    .OrderButton {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 950px) {
+    .BuildControls {
+        margin: -100px auto;
+    }
+    .Wrap {
+        position: relative;
+        left: 50%;
+        transform: translateX(-72%);
+        flex-wrap: wrap;
+        display: inline-block;
+        height: 450px;
+    }
+    .OrderButton {
+        display: block;
+        margin: 0 auto;
+        /* transform: translateX(-30%); */
+        
+    }
+}
+

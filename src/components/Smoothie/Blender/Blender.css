@@ -64,7 +64,8 @@
   -webkit-clip-path: polygon(6% 0, 94% 0, 100% 100%, 0 100%);
   clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%);
     margin: 0 auto;
-    box-shadow: 5px 10px #888888;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.25), 
+             0 0 50px rgba(0,0,0,0.1) inset;
     border-top: 1px solid black;
   }
   
@@ -76,6 +77,8 @@
     text-align: center;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.25), 
+             0 0 50px rgba(0,0,0,0.1) inset;
     
   }
   .topper {

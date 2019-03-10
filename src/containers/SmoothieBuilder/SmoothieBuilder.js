@@ -11,7 +11,12 @@ const INGREDIENT_PRICES = {
   oats: 0.2,
   banana: 0.2,
   strawberries: 0.4,
-  raspberries: 0.3
+  raspberries: 0.3,
+  kiwi: 0.2,
+  blueberries: 0.4,
+  kale: 0.3,
+  pineapple: 0.25,
+  mango: 0.35
 };
 
 class SmoothieBuilder extends Component {
@@ -43,7 +48,6 @@ class SmoothieBuilder extends Component {
     this.setState({purchasing: false});
   }
   continuePurchaseHandler = () => {
-  //   // alert('You have opted to continue');
   
   const queryParams = [];
     for (let i in this.state.ingredients) {
@@ -72,12 +76,21 @@ class SmoothieBuilder extends Component {
     const ingredientsCopy = {
       ...this.state.ingredients
     }
+  
+    const ingTotal = Object.keys(ingredientsCopy).reduce(function (acc, key) {
+      return acc += ingredientsCopy[key];
+    }, 0)
+    
+    if(ingTotal > 12) { 
+    this.tooManyIngredientsHandler() 
+    } else {
     ingredientsCopy[type] ++;
     const oldPrice = this.state.totalPrice;
     const updatedPrice = oldPrice + INGREDIENT_PRICES[type];
     this.setState({ingredients: ingredientsCopy, totalPrice: updatedPrice});
     this.updatePurchaseState(ingredientsCopy);
-}
+    }
+  }
   removeIngredientHandler = (type) => {
     const ingredientsCopy = {
       ...this.state.ingredients
@@ -85,9 +98,12 @@ class SmoothieBuilder extends Component {
     ingredientsCopy[type] --;
     const oldPrice = this.state.totalPrice;
     const updatedPrice = oldPrice - INGREDIENT_PRICES[type];
-    console.log(updatedPrice)
     this.setState({ingredients: ingredientsCopy, totalPrice: updatedPrice});
     this.updatePurchaseState(ingredientsCopy);
+}
+
+  tooManyIngredientsHandler = () => {
+    alert('You have reached the maximum number of ingredients allowed!');
 }
 
     render() {
@@ -107,8 +123,6 @@ class SmoothieBuilder extends Component {
           <>
           <Smoothie
           ingredients={this.state.ingredients}
-          // purchasable={this.state.purchasable}
-          // ordered={this.purchaseHandler}
           />
           <BuildControls
           add={this.addIngredientHandler}
