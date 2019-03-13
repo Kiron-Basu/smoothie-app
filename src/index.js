@@ -7,9 +7,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const app = (
-    <HashRouter>
+    <BrowserRouter>
         <App/>
-    </HashRouter>
+    </BrowserRouter>
 )
 
 ReactDOM.render(app , document.getElementById('root'));
