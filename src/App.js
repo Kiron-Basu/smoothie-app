@@ -23,11 +23,13 @@ class App extends Component {
         <Layout>
           {/* <SmoothieBuilder/>
           <Checkout /> */}
+      <HashRouter>
           <Switch>
             <Route path="/checkout" component={Checkout} />
             <Route path="/orders" exact component={Orders}/>
             <Route path="/" exact component={SmoothieBuilder} />
           </Switch>
+      </HashRouter>
         </Layout>
       </div>
     );
