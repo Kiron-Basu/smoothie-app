@@ -21,8 +21,8 @@ class App extends Component {
     return (
       <div>
         <Layout>
-          {/* <SmoothieBuilder/>
-          <Checkout /> */}
+          {<SmoothieBuilder/>
+          <Checkout />}
       <HashRouter>
           <Switch>
             <Route path="/checkout" component={Checkout} />
