@@ -1,12 +1,13 @@
 import React from 'react';
 import classes from './MenuToggle.css';
 
-const menuToggle = (props) => (
-    <div className={classes.MenuToggle} onClick={props.toggleClick}>
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+const menuToggle = ({ toggleClick }) => (
+  <div
+    className={classes.MenuToggle}
+    onClick={toggleClick}
+    onKeyDown={toggleClick}
+    role="presentation"
+  />
 );
 
 export default menuToggle;
