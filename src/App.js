@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import Layout from './containers/Layout/Layout';
 import SmoothieBuilder from './containers/SmoothieBuilder/SmoothieBuilder';
 import Checkout from './containers/Checkout/Checkout';
@@ -12,13 +12,13 @@ class App extends Component {
         <Layout>
           {/* <SmoothieBuilder/>
           <Checkout /> */}
-          <HashRouter>
-            <Switch>
-              <Route path="/" exact component={SmoothieBuilder} />
-              <Route path="/orders" exact component={Orders} />
-              <Route path="/checkout" component={Checkout} />
-            </Switch>
-          </HashRouter>
+          {/* <HashRouter> */}
+          <Switch>
+            <Route path="/checkout" component={Checkout} />
+            <Route path="/orders" component={Orders} />
+            <Route path="/" exact component={SmoothieBuilder} />
+          </Switch>
+          {/* </HashRouter> */}
         </Layout>
       </div>
     );

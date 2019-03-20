@@ -7,7 +7,11 @@ const menuToggle = ({ toggleClick }) => (
     onClick={toggleClick}
     onKeyDown={toggleClick}
     role="presentation"
-  />
+  >
+    <div />
+    <div />
+    <div />
+  </div>
 );
 
 export default menuToggle;
