@@ -14,16 +14,15 @@ class OrderSummary extends Component {
       purchaseContinued,
     } = this.props;
 
-    const ingredientSummary = Object.keys(ingredients).map(ingrtKey => {
-      <li key={ingrtKey}>
+    const ingredientSummary = Object.keys(ingredients).map(ingrtKey => <li key={ingrtKey}>
         <span style={{ textTransform: 'capitalize' }}>{ingrtKey}</span>:{' '}
         {ingredients[ingrtKey]}
-      </li>;
+      </li>);
     });
     return (
       <>
         <h3>Your Order</h3>
-        <p>Your smoothie has the follwing ingredients:</p>
+        <p>Your smoothie has the following ingredients:</p>
         <ul>{ingredientSummary}</ul>
         <p>
           <strong>Total Price: £ {price.toFixed(2)}</strong>
