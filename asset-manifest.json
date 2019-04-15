@@ -1,7 +1,7 @@
 {
   "main.css": "/smoothie-app/static/css/main.f25c3db8.chunk.css",
-  "main.js": "/smoothie-app/static/js/main.6c14d13b.chunk.js",
-  "main.js.map": "/smoothie-app/static/js/main.6c14d13b.chunk.js.map",
+  "main.js": "/smoothie-app/static/js/main.2273b73d.chunk.js",
+  "main.js.map": "/smoothie-app/static/js/main.2273b73d.chunk.js.map",
   "static/js/1.17d69020.chunk.js": "/smoothie-app/static/js/1.17d69020.chunk.js",
   "static/js/1.17d69020.chunk.js.map": "/smoothie-app/static/js/1.17d69020.chunk.js.map",
   "runtime~main.js": "/smoothie-app/static/js/runtime~main.13c7ca83.js",
@@ -9,6 +9,6 @@
   "static/media/smoothie-logo.png": "/smoothie-app/static/media/smoothie-logo.33734e66.png",
   "static/css/main.f25c3db8.chunk.css.map": "/smoothie-app/static/css/main.f25c3db8.chunk.css.map",
   "index.html": "/smoothie-app/index.html",
-  "precache-manifest.bd54f1135a450bd2d7f99dbe2ffe020b.js": "/smoothie-app/precache-manifest.bd54f1135a450bd2d7f99dbe2ffe020b.js",
+  "precache-manifest.7f21aeb2bdd1075d458f15c4475b5efc.js": "/smoothie-app/precache-manifest.7f21aeb2bdd1075d458f15c4475b5efc.js",
   "service-worker.js": "/smoothie-app/service-worker.js"
 }

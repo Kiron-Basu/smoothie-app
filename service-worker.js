@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/smoothie-app/precache-manifest.bd54f1135a450bd2d7f99dbe2ffe020b.js"
+  "/smoothie-app/precache-manifest.7f21aeb2bdd1075d458f15c4475b5efc.js"
 );
 
 workbox.clientsClaim();
